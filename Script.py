@@ -1,7 +1,7 @@
-def text_to_bits(text, encoding='utf-8', errors='surrogatepass'):
-    bits = bin(int.from_bytes(text.encode(encoding, errors), 'big'))[2:]
-    return bits
-
-input_text = input("Enter a string: ")
-output_bits = text_to_bits(input_text)
-print("Binary equivalent:", output_bits)
+text = "Text"
+binary = ""
+for char in text:
+    ascii_value = ord(char)
+    binary_value = bin(ascii_value)[2:].zfill(8)
+    binary += binary_value
+print(binary)
