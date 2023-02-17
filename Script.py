@@ -1,4 +1,4 @@
-text = "Text"
+text = input("Text:")
 binary = ""
 for char in text:
     ascii_value = ord(char)
